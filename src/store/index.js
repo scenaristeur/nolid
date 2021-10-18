@@ -13,13 +13,13 @@ export default new Vuex.Store({
     },
     sources: {},
     data: {},
-    documents : []
+    fragments : []
   },
   mutations: {
     updateData(state, data){
-      const index = state.documents.findIndex((el) => el.id === data.id)
-      index == -1 ? state.documents.push(data) : Object.assign(state.documents[data.id], data);
-      console.log(state.documents)
+      const index = state.fragments.findIndex((el) => el.id === data.id)
+      index == -1 ? state.fragments.push(data) : Object.assign(state.fragments[data.id], data);
+      console.log(state.fragments)
     },
     setData(state, data){
       state.data = data
