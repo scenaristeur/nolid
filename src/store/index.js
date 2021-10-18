@@ -12,9 +12,15 @@ export default new Vuex.Store({
       query_url: ""
     },
     sources: {},
-    data: {}
+    data: {},
+    documents : []
   },
   mutations: {
+    updateData(state, data){
+      const index = state.documents.findIndex((el) => el.id === data.id)
+      index == -1 ? state.documents.push(data) : Object.assign(state.documents[data.id], data);
+      console.log(state.documents)
+    },
     setData(state, data){
       state.data = data
       console.log(state.data)
