@@ -16,7 +16,7 @@ export default new Vuex.Store({
     fragments : []
   },
   mutations: {
-    updateData(state, data){
+    updateFragment(state, data){
       const index = state.fragments.findIndex((el) => el.id === data.id)
       index == -1 ? state.fragments.push(data) : Object.assign(state.fragments[data.id], data);
       console.log(state.fragments)

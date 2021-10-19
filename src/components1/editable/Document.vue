@@ -6,7 +6,7 @@
       <div
       ref="input"
       contentEditable="true"
-      @blur="blur(doc)" v-html="doc.formated || doc.value || doc.textContent"
+      @blur="blur(doc)" v-html="doc.formated || doc.text || doc.textContent"
       @keydown="keyDown"></div>
     </div>
 
@@ -33,7 +33,7 @@ export default {
       console.log(doc)
       console.log("blur", this.$refs.input.innerHTML)
       var copie = Object.assign({}, this.data);
-      copie.value= this.$refs.input.innerHTML,
+      copie.text= this.$refs.input.innerHTML,
 
       console.log(copie)
       this.$store.commit('updateData', copie)

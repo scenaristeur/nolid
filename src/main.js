@@ -3,6 +3,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import NolidPlugin from './plugins/nolid';
+Vue.use(NolidPlugin, {store: store});
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 

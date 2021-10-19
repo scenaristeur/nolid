@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nolid/precache-manifest.cf0a00e15a5f460264bebd093e71438d.js"
+  "/nolid/precache-manifest.8cfc9e571f83f5e539752ed36b261e5b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "nolid"});
